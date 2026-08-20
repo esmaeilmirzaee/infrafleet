@@ -1,0 +1,12 @@
+@startuml
+skinparam shadowing false
+start
+:User opens web page;
+:Forward to authentication;
+|#AntiqueWhite|Authentication|
+:Authenticate with username\nand password;
+:Forward to Web-UI;
+|Component with Web-UI|
+:Open Web-UI;
+stop
+@enduml
