@@ -1,0 +1,18 @@
+= Component A Documentation
+:navtitle: Welcome
+
+Welcome to the official developer guide for Component A. 
+
+== System Architecture
+
+Here is the high-level layout of our system, rendered directly via the Kroki engine.
+
+[mermaid]
+----
+graph TD
+    A[Client Request] --> B(Docker Container)
+    B --> C{Antora Engine}
+    C -->|Renders HTML| D[Production Docs]
+----
+
+Move to the xref:setup.adoc[Setup Guide] to configure your developer machine.

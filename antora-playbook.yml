@@ -1,0 +1,30 @@
+site:
+  title: Infrastructure Fleet Documentation
+  url: https://infrafleet.run
+  start_page: component-a::index.adoc
+content:
+  sources:
+    # # Example Remote Git Repository 1
+    # - url: https://github.com
+    #   branches: [main, v1.0]
+    #   start_path: docs
+    # # Example Remote Git Repository 2
+    - url: https://github.com/esmaeilmirzaee/infrafleet.git
+      branches: main
+      start_path: docs
+asciidoc:
+  extensions:
+    # Enables diagrams via the free public Kroki endpoint
+    - asciidoctor-kroki
+  attributes:
+    # Production-ready code highlighting settings
+    source-highlighter: rouge
+    rouge-style: github
+    icons: font
+    sectnums: true
+antora:
+  extensions:
+    # Adds a production-ready local search engine to your docs
+    - "@antora/lunr-extension"
+output:
+  dir: ./build/site

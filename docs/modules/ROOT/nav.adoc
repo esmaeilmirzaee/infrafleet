@@ -1,0 +1,2 @@
+* xref:index.adoc[Welcome to Component A]
+* xref:setup.adoc[Installation & Setup]

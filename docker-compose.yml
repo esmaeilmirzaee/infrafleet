@@ -1,0 +1,14 @@
+services:
+  antora:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # Mounts a local folder to easily view the generated static HTML files
+      - ./build:/antora/build
+      # Caches remote Git repositories to drastically speed up sequential builds
+      - antora-cache:/home/antora/.cache/antora
+    command: ["antora-playbook.yml", "--to-dir", "build/site"]
+
+volumes:
+  antora-cache:

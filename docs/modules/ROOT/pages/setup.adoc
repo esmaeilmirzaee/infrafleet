@@ -1,0 +1,18 @@
+= Installation & Setup
+:description: How to configure the environment.
+
+Follow these quick commands to spin up the local project environment.
+
+== Quickstart Code
+
+Run this script in your terminal to bootstrap the system:
+
+[source,bash]
+----
+#!/usr/bin/env bash
+echo "Initializing deployment script..."
+docker compose up -d --build
+echo "System online at http://localhost:8080"
+----
+
+NOTE: Ensure your local Docker daemon is running before executing this script.
